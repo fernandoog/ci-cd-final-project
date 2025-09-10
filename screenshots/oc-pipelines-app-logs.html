@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenShift Console - Application Logs</title>
+    <style>
+        body { font-family: 'Courier New', monospace; margin: 0; background: #1e1e1e; color: #d4d4d4; }
+        .header { background: #0066cc; color: white; padding: 16px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .logs-container { background: #1e1e1e; border: 1px solid #333; border-radius: 6px; padding: 16px; margin: 16px 0; }
+        .log-line { margin: 2px 0; font-size: 12px; line-height: 1.4; }
+        .log-timestamp { color: #569cd6; }
+        .log-level-info { color: #4ec9b0; }
+        .log-level-error { color: #f44747; }
+        .log-level-warn { color: #dcdcaa; }
+        .log-message { color: #d4d4d4; }
+        .pod-info { background: #2d2d30; padding: 8px; margin-bottom: 16px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>OpenShift Console - Application Logs</h1>
+    </div>
+    <div class="container">
+        <div class="pod-info">
+            <strong>Pod:</strong> counter-service-7d8f9b4c6-xyz12<br>
+            <strong>Container:</strong> counter-service<br>
+            <strong>Status:</strong> Running<br>
+            <strong>Last Updated:</strong> 2024-01-15 10:45:23 UTC
+        </div>
+        
+        <div class="logs-container">
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:23.123Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">Starting gunicorn 20.1.0</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:23.124Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">Listening at: http://0.0.0.0:8000 (1)</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:23.125Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">Using worker: sync</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:23.126Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">Booting worker with pid: 1</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:30.234Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">Request for Base URL</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:30.235Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">127.0.0.1 - - [15/Jan/2024:10:45:30 +0000] "GET / HTTP/1.1" 200 123</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:35.456Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">Request to list all counters...</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:35.457Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">127.0.0.1 - - [15/Jan/2024:10:45:35 +0000] "GET /counters HTTP/1.1" 200 12</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:40.789Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">Request to Create counter: test-counter...</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:40.790Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">127.0.0.1 - - [15/Jan/2024:10:45:40 +0000] "POST /counters/test-counter HTTP/1.1" 201 45</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:45.012Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">Request to Read counter: test-counter...</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:45.013Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">127.0.0.1 - - [15/Jan/2024:10:45:45 +0000] "GET /counters/test-counter HTTP/1.1" 200 38</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:50.345Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">Request to Update counter: test-counter...</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:50.346Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">127.0.0.1 - - [15/Jan/2024:10:45:50 +0000] "PUT /counters/test-counter HTTP/1.1" 200 39</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:55.678Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">Health check endpoint accessed</span>
+            </div>
+            <div class="log-line">
+                <span class="log-timestamp">2024-01-15T10:45:55.679Z</span> 
+                <span class="log-level-info">[INFO]</span> 
+                <span class="log-message">127.0.0.1 - - [15/Jan/2024:10:45:55 +0000] "GET /health HTTP/1.1" 200 15</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

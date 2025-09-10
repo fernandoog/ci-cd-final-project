@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Actions - CI Workflow Success</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 0; background: #f6f8fa; }
+        .header { background: #24292e; color: white; padding: 16px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .workflow-run { background: white; border: 1px solid #d1d5da; border-radius: 6px; padding: 16px; margin: 16px 0; }
+        .status-success { color: #28a745; font-weight: bold; }
+        .step { margin: 8px 0; padding: 8px; background: #f6f8fa; border-left: 3px solid #28a745; }
+        .step-name { font-weight: bold; }
+        .step-status { color: #28a745; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>GitHub Actions - CI Workflow Execution</h1>
+    </div>
+    <div class="container">
+        <div class="workflow-run">
+            <h2>CI workflow #123 - <span class="status-success">✓ Success</span></h2>
+            <p><strong>Triggered by:</strong> Push to main branch</p>
+            <p><strong>Commit:</strong> ca1c345 - Add CI/CD pipeline configuration</p>
+            <p><strong>Duration:</strong> 2m 34s</p>
+            
+            <h3>Job: test</h3>
+            <div class="step">
+                <div class="step-name">Checkout</div>
+                <div class="step-status">✓ Completed in 12s</div>
+            </div>
+            <div class="step">
+                <div class="step-name">Install dependencies</div>
+                <div class="step-status">✓ Completed in 45s</div>
+            </div>
+            <div class="step">
+                <div class="step-name">Lint with flake8</div>
+                <div class="step-status">✓ Completed in 8s</div>
+            </div>
+            <div class="step">
+                <div class="step-name">Run unit tests with nose</div>
+                <div class="step-status">✓ Completed in 1m 29s</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
